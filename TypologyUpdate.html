@@ -1,0 +1,52 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-generic" href="favicon.ico" />
+<script src=EvolvingQuizWPercent.js>
+</script>
+<link rel="stylesheet" media="screen and (min-device-width: 800px)" type="text/css" href="Typology.css">
+<link rel="stylesheet" media="screen and (max-device-width: 900px)" type="text/css" href="TypologyMobile.css">
+<title>
+Political Typology Quiz
+</title>
+</head>
+
+<body onload="go(locations, questions, questionIds, answers)" onclick="updatePercent()">
+  <ul class='percentBar'>
+   <div id='percent'></div>
+    </ul>
+  <ul class='menuBar'>
+<h1 class='top'>Political Typology Quiz</h1>
+<h3>An unscientific questionaire</h3>
+</ul>
+  <div class='main'>
+    <div class='spacer'>
+    </div>
+<div class='mainText'>
+  <h2>The page will add questions that are tailored to your initial answer choices while you take the quiz. You can make changes to your answers and resubmit for a new determination. Changes to earlier answers may reset later answers. The order of answer choices is randomized each time the page is loaded. <h2>
+    <br>
+    <br>
+<div class = 'section' id='location1'>Loading...</div>
+<div class = 'section' id='location2'></div>
+<div class = 'section' id='location3'></div>
+<div class = 'section'  id='location4'></div>
+<div class = 'section'  id='tiebreakerLocation'></div>
+<div class = 'section'  id='newLocation1' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation2' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation3' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation4' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation5' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation6' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation7' onclick="updatePercent()"></div>
+<div class = 'section'  id='newLocation8' onclick="updatePercent()"></div>
+<div id='submitButton'></div>
+<div id='results'></div>
+  </div>
+  <div class='spacer'>
+  </div>
+<footer>politicaltypology.com</footer>
+</div>
+</body>
+</html>
