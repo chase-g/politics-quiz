@@ -1,0 +1,121 @@
+html {
+background-color: #ffcc99;
+}
+/*Don't remove this body tag*/
+body {
+  margin:0;
+}
+
+ul.percentBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  top: 0;
+  width: 100%;
+  position:fixed;
+  z-index: 1;
+}
+ul.menuBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+html,body{
+height: 100%;
+}
+h1{
+text-align: center;
+font-size: 5em;
+font-weight: bolder;
+font-family: 'Playfair Display', monospace;
+color:#ffcc99;
+}
+h2{
+  font-size: 1.3em;
+}
+.section{
+  font-size: 1.5em;
+}
+h3{
+text-align: center;
+font-size: 1.5em;
+font-weight: bolder;
+font-family: 'Playfair Display', monospace;
+text-align-last: center;
+color:#ffcc99;
+}
+div.mainText{
+  background: rgba(250,250,250, 0.92);
+  padding: 1.5em;
+  margin: .5em 1.5em .5em 1.5em;
+  margin-bottom: 3em;
+  font-family: 'Lato', serif;
+  font-size: 1.7em;
+  font-size-adjust: auto;
+  z-index: 0;
+  position: relative;
+}
+footer{
+  background: rgba(250,250,250, 0.9);
+  font-family: 'Playfair Display', monospace;
+  font-size: 1em;
+  font-size-adjust: auto;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  padding-bottom:.5em;
+  padding-top:.5em;
+}
+a:visited{
+  color:#000;
+}
+a.footer{
+  color:#000;
+  font-family: 'Playfair Display', monospace;
+}
+div.header{
+  background-color: rgba(0,0,0,0.6);
+  background-size: auto;
+  margin: 5em 8em 0em 8em;
+}
+#results{
+  text-align: center;
+  font-size: 2.1em;
+}
+input[type=radio] {
+    border: 0px;
+    width: 2.5em;
+    height: 2.5em;
+}
+/* replacing ul.menuBar a:hover with label:hover, and changing color from #ffcc99 to a dark gray*/
+  div.section label:hover{
+  color:#444444;
+}
+div#percent{
+  text-align: center;
+  font-size: 3em;
+  font-weight: bolder;
+  font-family: 'Lato', serif;
+  color: #ffcc99;
+  padding-bottom: 1em;
+  padding-top:1em;
+}
+
+input[type=submit] {
+    width: 7em;
+    height: 2em;
+    font-size: 2em;
+    font-family: 'Playfair Display', monospace;
+    text-align: center;
+    background-color:#ffcc99;
+    margin-bottom: .8em;
+    margin-left: 30%;
+}
