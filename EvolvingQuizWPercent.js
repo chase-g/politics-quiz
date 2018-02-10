@@ -164,26 +164,32 @@ for (var i = 0; i < answers.length; i++ ) {
   write_answers(questionIds[i], answers[i])
 }
 }
+
+//selection checking function
+function check(element){
+  if(document.getElementById(element).checked) return true
+  else return false
+}
 //Libertarian grade function
 function gradeLib(){
 let output = '';
 document.getElementById('results').innerHTML = output;
-if(document.getElementById('ubiYes').checked){
+if(check('ubiYes')){
   output = output + "<a href='https://en.wikipedia.org/wiki/Left-libertarianism' target='_blank'> bleeding heart</a> ";
 }
-if(document.getElementById('greenYes').checked && document.getElementById('lvtYes').checked) {
+if(check('greenYes') && check('lvtYes')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Georgism' target='_blank'> georgist</a> ";
 }
-if(document.getElementById('immigrationNo').checked && document.getElementById('abortNo').checked) {
+if(check('immigrationNo') && check('abortNo')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Fusionism' target='_blank'> conservatarian</a> ";
 }
-if((document.getElementById('greenYes').checked || document.getElementById('greenMaybe').checked) && document.getElementById('ubiMaybe').checked && document.getElementById('minNo').checked && (document.getElementById('immigrationYes').checked || document.getElementById('immigrationMaybe').checked)) {
+if((check('greenYes') || check('greenMaybe')) && check('ubiMaybe') && check('minNo') && check('immigrationYes') || check('immigrationMaybe')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Classical_liberalism' target='_blank'> classical liberal</a> ";
 }
-if(document.getElementById('ubiNo').checked && document.getElementById('minSome').checked && document.getElementById('immigrationYes').checked) {
+if(check('ubiNo') && check('minSome') && check('immigrationYes')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Minarchism' target='_blank'> minarchist</a> ";
 }
-if(document.getElementById('ubiNo').checked && document.getElementById('minNone').checked && document.getElementById('immigrationYes').checked && document.getElementById('abortYes').checked && document.getElementById('lvtNo').checked && document.getElementById('greenNo').checked) {
+if(check('ubiNo') && check('minNone') && check('immigrationYes') && check('abortYes') && check('lvtNo') && check('greenNo')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Anarcho-capitalism' target='_blank'> anarcho-capitalist</a> ";
 }
 if(output.includes("classical liberal") || output.includes("conservatarian") || output.includes("minarchist") || output.includes("anarcho-capitalist")){
@@ -198,22 +204,22 @@ else {
 function gradeCon(){
 let output = '';
 document.getElementById('results').innerHTML = output;
-if(document.getElementById('safetyYes').checked && document.getElementById('breaksYes').checked && document.getElementById('immigrationSocial').checked) {
+if(check('safetyYes') && check('breaksYes') && check('immigrationSocial')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Compassionate_conservatism' target='_blank'> compassionate</a> ";
 }
-if(document.getElementById('breaksYes').checked && document.getElementById('reliYes').checked) {
+if(check('breaksYes') && check('reliYes')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Christian_right' target='_blank'> religious</a> ";
 }
-if(document.getElementById('immigrationNo').checked && document.getElementById('tariffsYes').checked && (document.getElementById('safetyYes').checked || document.getElementById('militaryYes').checked)){
+if(check('immigrationNo') && check('tariffsYes') && (check('safetyYes') || check('militaryYes'))){
   output = output + "<a href='https://en.wikipedia.org/wiki/Populism' target='_blank'> populist</a> ";
 }
-if(document.getElementById('militaryNo').checked && document.getElementById('tariffsNo').checked && (document.getElementById('immigrationMarket').checked || document.getElementById('breaksNo').checked)) {
+if(check('militaryNo') && check('tariffsNo') && (check('immigrationMarket') || check('breaksNo'))) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Libertarian_conservatism' target='_blank'> libertarian</a> ";
 }
-if(document.getElementById('immigrationNo').checked && document.getElementById('centralNo').checked && (document.getElementById('militaryNo').checked || document.getElementById('tariffsYes').checked)) {
+if(check('immigrationNo') && check('centralNo') && (check('militaryNo') || check('tariffsYes'))) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Paleoconservatism' target='_blank'> paleoconservative</a> ";
 }
-if(document.getElementById('militaryYes').checked && document.getElementById('centralYes').checked) {
+if(check('militaryYes') && check('centralYes')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Neoconservatism' target='_blank'> neoconservative</a> ";
 }
 if(output.includes("paleoconservative") || output.includes("neoconservative")){
@@ -228,25 +234,25 @@ else {
 function gradePro(){
 let output = '';
 document.getElementById('results').innerHTML = output;
-if(document.getElementById('hawk').checked) {
+if(check('hawk')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/War_hawk' target='_blank'> hawkish</a> ";
 }
-if(document.getElementById('socialJustice').checked && document.getElementById('adminYes').checked) {
+if(check('socialJustice') && check('adminYes')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Social_justice' target='_blank'> social-justice</a> ";
 }
-if(document.getElementById('technoNo').checked && document.getElementById('tariffsYes').checked && document.getElementById('universal').checked){
+if(check('technoNo') && check('tariffsYes') && check('universal')){
   output = output + "<a href='https://en.wikipedia.org/wiki/Populism' target='_blank'> populist</a> ";
 }
-if(document.getElementById('public').checked && document.getElementById('universal').checked) {
+if(check('public') && check('universal')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Socialism' target='_blank'> socialist</a> ";
 }
-if(document.getElementById('private').checked && document.getElementById('adminNo').checked && document.getElementById('tariffsNo').checked && document.getElementById('UBI').checked){
+if(check('private') && check('adminNo') && check('tariffsNo') && check('UBI')){
   output = output + "<a href='https://en.wikipedia.org/wiki/Left-libertarianism' target='_blank'> bleeding heart libertarian</a> ";
 }
-if((document.getElementById('private').checked || document.getElementById('mixed').checked) && document.getElementById('subsidize').checked && document.getElementById('tariffsNo').checked) {
+if((check('private') || check('mixed')) && check('subsidize') && check('tariffsNo')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Third_Way' target='_blank'> third way</a> ";
 }
-if(document.getElementById('mixed').checked && document.getElementById('universal').checked) {
+if(check('mixed') && check('universal')) {
   output = output + "<a href='https://en.wikipedia.org/wiki/Social_democracy' target='_blank'> social democrat</a> ";
 }
 if(output.includes("social democrat") || output.includes("socialist") || output.includes("bleeding heart libertarian")){
