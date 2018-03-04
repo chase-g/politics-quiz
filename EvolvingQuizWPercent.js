@@ -6,9 +6,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-97433788-1', 'auto');
 ga('send', 'pageview');
 
-var you = "";
-var subtype = "";
-
 //Answers to be shuffled
 //Use ids to determine whether answer is checked for scoring purposes
 //shuffle function adds these snippets to the DOM
