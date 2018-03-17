@@ -1,11 +1,11 @@
-div.spacer {
-background: url(Carina.jpeg) no-repeat center fixed;
- width: 100%;
- height:35%;
- z-index: -1;
- position: relative;
+html {
+background: url(Carina.jpeg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
-/*Don't remove this body tag*/
+
 body {
   margin:0;
 }
@@ -40,13 +40,13 @@ h1{
 text-align: center;
 font-size: 2.3em;
 font-weight: bolder;
-font-family: 'Playfair Display', monospace;;
+font-family: 'Lato', monospace;;
 color:#ffcc99;
 }
 h2{
   font-size: 1.2em;
 }
-div.section{
+.section{
   font-size: 1.2em;
   margin-bottom: 1em;
 }
@@ -54,14 +54,15 @@ h3{
 text-align: center;
 font-size: 1.2em;
 font-weight: bolder;
-font-family:'Playfair Display', monospace;;
+font-family:'Lato', monospace;;
 text-align-last: center;
 color:#ffcc99;
 }
 div.mainText{
-  background: rgb(250, 250, 250);
-  padding: 10em;
+  background: rgba(250,250,250, 0.94);
+  padding: 5em;
   padding-bottom: 7em;
+  margin: 4em 7em 4em 7em;
   font-family: 'Lato', serif;
   font-size: 1em;
   font-size-adjust: auto;
@@ -69,8 +70,8 @@ div.mainText{
   position: relative;
 }
 footer{
-  background: #fff5ee;
-  font-family: 'Playfair Display', monospace;;
+  background: rgba(250,250,250, 0.9);
+  font-family: 'Lato', monospace;;
   font-size: .8em;
   font-size-adjust: auto;
   color: rgba(0,0,0,1);
@@ -83,7 +84,12 @@ a:visited{
 }
 a.footer{
   color:#000;
-  font-family: 'Playfair Display', monospace;;
+  font-family: 'Lato', monospace;;
+}
+div.header{
+  background-color: rgba(0,0,0,0.6);
+  background-size: auto;
+  margin: 5em 8em 0em 8em;
 }
 
 #results{
@@ -95,7 +101,7 @@ input[type=radio] {
     width: 2em;
     height: 2em;
 }
-/* replacing ul.menuBar a:hover with label:hover, and changing color from #ffcc99 to a dark gray*/
+
   div.section label:hover{
   color:#444444;
 }
@@ -104,7 +110,7 @@ div#percent{
   text-align: center;
   font-size: 1.2em;
   font-weight: bolder;
-  font-family: 'Lato', serif;
+  font-family: 'Lato', monospace;;
   color: #ffcc99;
   padding-bottom: 1em;
   padding-top:1em;
@@ -113,7 +119,7 @@ input[type=submit] {
     width: 7em;
     height: 2em;
     font-size: 2em;
-    font-family: 'Playfair Display', monospace;;
+    font-family: 'Lato', monospace;;
     text-align: center;
     background-color:#ffcc99;
     margin-bottom: 1em;
@@ -123,3 +129,4 @@ input[type=submit] {
 label.choices {
   font-size: 3em;
 }
+
